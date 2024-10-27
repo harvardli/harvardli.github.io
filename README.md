@@ -1,5 +1,5 @@
 # About Me
 
-Hello! My name is **[Harvard Li]**
+Hello! My name is **Harvard Li**
 
 
