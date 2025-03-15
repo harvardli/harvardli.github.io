@@ -13,11 +13,12 @@
             font-family: Georgia, serif; /* Formal font */
             background-color: #121212; /* Dark background */
             color: #ffffff; /* Light text */
+            scroll-behavior: smooth; /* Enables smooth scrolling */
         }
 
         /* Section Styling */
         .section { 
-            padding: 60px 0; 
+            padding: 100px 0; /* Increased padding for smooth navigation */
         }
 
         /* Alternating background shades for readability */
@@ -32,6 +33,10 @@
         .navbar { 
             background-color: #000000; 
             box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); 
+            position: fixed; /* Keep navbar fixed */
+            width: 100%;
+            top: 0;
+            z-index: 1000; /* Ensure navbar is always on top */
         }
 
         .navbar-brand, .nav-link {
@@ -44,6 +49,11 @@
 
         .navbar-toggler-icon {
             background-color: #ffffff; /* White hamburger menu */
+        }
+
+        /* Offset for fixed navbar */
+        .offset {
+            padding-top: 80px; /* Adjust to match navbar height */
         }
 
         /* Heading Styles */
@@ -123,7 +133,7 @@
     <div class="container mt-4">
         
         <!-- About Me -->
-        <div class="row section">
+        <div id="about" class="row section offset">
             <div class="col text-center">
                 <h2>About Me</h2>
                 <!-- Profile Picture Placeholder -->
@@ -133,7 +143,7 @@
         </div>
 
         <!-- Projects -->
-        <div class="row section">
+        <div id="projects" class="row section offset">
             <div class="col">
                 <h2 class="text-center">Projects</h2>
                 <ul class="list-group">
@@ -147,7 +157,7 @@
         </div>
 
         <!-- Awards & Achievements -->
-        <div class="row section">
+        <div id="awards" class="row section offset">
             <div class="col">
                 <h2 class="text-center">Awards & Achievements</h2>
                 <ul class="list-group">
@@ -160,7 +170,7 @@
         </div>
 
         <!-- Personal Statement -->
-        <div class="row section">
+        <div id="PS" class="row section offset">
             <div class="col text-center">
                 <h2>Personal Statement</h2>
                 <p>Click below to preview my personal statement:</p>
