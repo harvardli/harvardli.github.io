@@ -39,8 +39,12 @@
             color: #ffffff !important;
         }
 
+        .navbar-toggler {
+            border: none;
+        }
+
         .navbar-toggler-icon {
-            background-color: #ffffff;
+            filter: invert(1);
         }
 
         /* Heading Styles */
@@ -143,6 +147,11 @@
             background: none;
             margin-left: 10px;
         }
+
+        /* Monochrome Emoji */
+        .emoji {
+            filter: grayscale(100%);
+        }
     </style>
 </head>
 
@@ -163,7 +172,7 @@
                     <li class="nav-item"><a class="nav-link" href="#PS">Personal Statement</a></li>
                 </ul>
                 <!-- Dark Mode Toggle Button -->
-                <button class="toggle-btn" onclick="toggleMode()">🌙</button>
+                <button class="toggle-btn emoji" onclick="toggleMode()">🌙</button>
             </div>
         </div>
     </nav>
@@ -234,11 +243,11 @@
             
             if (body.classList.contains("light-mode")) {
                 body.classList.remove("light-mode");
-                toggleButton.textContent = <span class="emoji">☀️</span>;
+                toggleButton.textContent = "🌙";
                 localStorage.setItem("theme", "dark");
             } else {
                 body.classList.add("light-mode");
-                toggleButton.textContent = <span class="emoji">🌙</span>;
+                toggleButton.textContent = "☀️";
                 localStorage.setItem("theme", "light");
             }
         }
@@ -247,7 +256,7 @@
         window.onload = function() {
             if (localStorage.getItem("theme") === "light") {
                 document.body.classList.add("light-mode");
-                document.querySelector(".toggle-btn").textContent = <span class="emoji">🌙</span>;
+                document.querySelector(".toggle-btn").textContent = "☀️";
             }
         };
     </script>
