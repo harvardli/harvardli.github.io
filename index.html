@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     
     <style>
-        /* Global Dark Mode Styling */
+        /* Global Styling */
         body { 
             font-family: Georgia, serif; /* Formal font */
-            background-color: #121212; /* Dark background */
-            color: #ffffff; /* Light text */
+            background-color: #121212; /* Default Dark Mode */
+            color: #ffffff;
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
         }
 
         /* Section Styling */
@@ -20,7 +21,7 @@
             padding: 60px 0; 
         }
 
-        /* Alternating background shades for readability */
+        /* Alternating background shades */
         .section:nth-child(even) { 
             background-color: #1e1e1e; 
         } 
@@ -35,15 +36,15 @@
         }
 
         .navbar-brand, .nav-link {
-            color: #ffffff !important; /* Make sure text is white */
+            color: #ffffff !important;
         }
 
         .navbar-toggler {
-            border-color: rgba(255, 255, 255, 0.5); /* Ensure toggler is visible */
+            border-color: rgba(255, 255, 255, 0.5);
         }
 
         .navbar-toggler-icon {
-            background-color: #ffffff; /* White hamburger menu */
+            background-color: #ffffff;
         }
 
         /* Heading Styles */
@@ -79,22 +80,57 @@
             text-align: center;
         }
 
-        /* List Group (Projects & Awards) */
+        /* List Group */
         .list-group-item {
             background-color: #1e1e1e;
             color: #ffffff;
             border-color: #444;
         }
 
-        /* Links */
-        a {
-            color: #00aaff;
-            text-decoration: none;
+        /* Toggle Light Mode */
+        .light-mode {
+            background-color: #ffffff !important;
+            color: #000000 !important;
         }
 
-        a:hover {
-            text-decoration: underline;
-            color: #66d9ff;
+        .light-mode .section:nth-child(even) { 
+            background-color: #f8f8f8 !important;
+        } 
+        .light-mode .section:nth-child(odd) { 
+            background-color: #ffffff !important;
+        }
+
+        .light-mode .navbar {
+            background-color: #f8f8f8 !important;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .light-mode .navbar-brand, .light-mode .nav-link {
+            color: #000000 !important;
+        }
+
+        .light-mode .list-group-item {
+            background-color: #ffffff;
+            color: #000000;
+            border-color: #ddd;
+        }
+
+        .light-mode .profile-pic {
+            border: 3px solid #000;
+        }
+
+        .light-mode footer {
+            background-color: #f8f8f8;
+            color: #000;
+        }
+
+        /* Toggle Button */
+        .toggle-btn {
+            font-size: 1.5rem;
+            cursor: pointer;
+            border: none;
+            background: none;
+            margin-left: 10px;
         }
     </style>
 </head>
@@ -115,6 +151,8 @@
                     <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
                     <li class="nav-item"><a class="nav-link" href="#PS">Personal Statement</a></li>
                 </ul>
+                <!-- Dark Mode Toggle Button -->
+                <button class="toggle-btn" onclick="toggleMode()">🌙</button>
             </div>
         </div>
     </nav>
@@ -126,7 +164,6 @@
         <div class="row section">
             <div class="col text-center">
                 <h2>About Me</h2>
-                <!-- Profile Picture Placeholder -->
                 <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
                 <p>Hello! I'm <b>[My Name]</b>.</p>
             </div>
@@ -177,6 +214,32 @@
 
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript for Light/Dark Mode Toggle -->
+    <script>
+        function toggleMode() {
+            const body = document.body;
+            const toggleButton = document.querySelector(".toggle-btn");
+            
+            if (body.classList.contains("light-mode")) {
+                body.classList.remove("light-mode");
+                toggleButton.textContent = "🌙";
+                localStorage.setItem("theme", "dark");
+            } else {
+                body.classList.add("light-mode");
+                toggleButton.textContent = "🌞";
+                localStorage.setItem("theme", "light");
+            }
+        }
+
+        // Load Theme from Local Storage
+        window.onload = function() {
+            if (localStorage.getItem("theme") === "light") {
+                document.body.classList.add("light-mode");
+                document.querySelector(".toggle-btn").textContent = "🌞";
+            }
+        };
+    </script>
 
 </body>
 </html>
