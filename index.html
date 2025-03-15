@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>University Application Portfolio</title>
+    <title>[My Name]</title> <!-- Renamed Site Title -->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     
@@ -39,6 +39,16 @@
             color: #000000; 
         }
 
+        /* Profile Picture */
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #000;
+            margin-bottom: 15px;
+        }
+
         /* Button Styling */
         .btn-primary { 
             background-color: #0056b3; 
@@ -62,7 +72,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">My University Portfolio</a>
+            <a class="navbar-brand" href="#">[My Name]</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -70,7 +80,6 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
                     <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
                     <li class="nav-item"><a class="nav-link" href="#PS">Personal Statement</a></li>
                 </ul>
@@ -82,37 +91,27 @@
     <section id="about" class="section text-center">
         <div class="container">
             <h2>About Me</h2>
-            <p>Hello! I'm <b>Harvard Li</b>.</p>
+            <!-- Profile Picture Placeholder -->
+            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+            <p>Hello! I'm <b>[My Name]</b>.</p>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section (Formatted as List) -->
     <section id="projects" class="section">
         <div class="container">
             <h2 class="text-center">My Projects</h2>
-            <div class="row">
-                <div class="col-md-6">
+            <ul class="list-group">
+                <li class="list-group-item">
                     <h4>Quadcopter UAV</h4>
                     <p>Designed and built a quadcopter UAV for autonomous flight.</p>
                     <a href="Quadcopter_UAV.pdf" class="btn btn-primary" target="_blank">View Project</a>
-                </div>
-                <div class="col-md-6">
+                </li>
+                <li class="list-group-item">
                     <h4>BPhO Computational Challenge 2024</h4>
-                    <p>This is the submittion to the British Physics Olympiad Computational Challenge in 2024 that Alex Pavlov and I have created. Our submission achieved top 5 in the country and a Gold award.</p>
+                    <p>This is the submission to the British Physics Olympiad Computational Challenge in 2024 that Alex Pavlov and I created. Our submission achieved top 5 in the country and a Gold award.</p>
                     <a href="https://www.youtube.com/watch?v=TZfNXA3C9mU" class="btn btn-danger" target="_blank">Watch Video</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research Section -->
-    <section id="research" class="section">
-        <div class="container">
-            <h2 class="text-center">Research & Publications</h2>
-            <p>Here are some of my research papers and essays:</p>
-            <ul>
-                <li><a href="research-paper.pdf" target="_blank"><b>[Paper Title]</b> - [Brief Summary]</a></li>
-                <li><a href="essay.pdf" target="_blank"><b>[Essay Title]</b> - [Short Description]</a></li>
+                </li>
             </ul>
         </div>
     </section>
@@ -121,10 +120,10 @@
     <section id="awards" class="section">
         <div class="container">
             <h2 class="text-center">Awards & Achievements</h2>
-            <ul>
-                <li><b>[Competition Name]</b> - [Award]</li>
-                <li><b>[Scholarship or Grant Name]</b></li>
-                <li><b>[Coding Challenge, Science Fair, or Math Olympiad, etc.]</b></li>
+            <ul class="list-group">
+                <li class="list-group-item"><b>[Competition Name]</b> - [Award]</li>
+                <li class="list-group-item"><b>[Scholarship or Grant Name]</b></li>
+                <li class="list-group-item"><b>[Coding Challenge, Science Fair, or Math Olympiad, etc.]</b></li>
             </ul>
         </div>
     </section>
@@ -140,7 +139,7 @@
 
     <!-- Footer -->
     <footer class="text-center">
-        © 2025 Harvard Li | Hosted on GitHub Pages
+        © 2025 [My Name] | Hosted on GitHub Pages
     </footer>
 
     <!-- Bootstrap JavaScript -->
