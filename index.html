@@ -234,11 +234,11 @@
             
             if (body.classList.contains("light-mode")) {
                 body.classList.remove("light-mode");
-                toggleButton.textContent = "🌙";
+                toggleButton.textContent = <span class="emoji">☀️</span>;
                 localStorage.setItem("theme", "dark");
             } else {
                 body.classList.add("light-mode");
-                toggleButton.textContent = "🌞";
+                toggleButton.textContent = <span class="emoji">🌙</span>;
                 localStorage.setItem("theme", "light");
             }
         }
@@ -247,7 +247,7 @@
         window.onload = function() {
             if (localStorage.getItem("theme") === "light") {
                 document.body.classList.add("light-mode");
-                document.querySelector(".toggle-btn").textContent = "🌞";
+                document.querySelector(".toggle-btn").textContent = <span class="emoji">🌙</span>;
             }
         };
     </script>
