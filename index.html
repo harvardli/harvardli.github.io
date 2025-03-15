@@ -10,33 +10,37 @@
     <style>
         /* Global Styling */
         body { 
-            font-family: Georgia, serif; /* More formal and readable font */
+            font-family: Georgia, serif; /* Formal font */
             background-color: #ffffff; 
             color: #000000;
         }
 
         /* Section Styling */
         .section { 
-            padding: 60px 0; 
+            padding: 40px 0; 
         }
 
-        /* Alternating background colors for better readability */
-        .section:nth-child(even) { 
-            background-color: #f8f8f8; 
-        } 
-        .section:nth-child(odd) { 
-            background-color: #ffffff; 
+        /* Two-column layout */
+        .container {
+            max-width: 900px;
         }
 
-        /* Navbar Styling */
-        .navbar { 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+        .row {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+            margin-bottom: 25px;
         }
 
-        /* Heading Styles */
-        h2 { 
-            font-weight: bold; 
-            color: #000000; 
+        .col-title {
+            flex: 1;
+            font-weight: bold;
+            min-width: 150px;
+            padding-right: 15px;
+        }
+
+        .col-content {
+            flex: 3;
         }
 
         /* Profile Picture */
@@ -49,13 +53,9 @@
             margin-bottom: 15px;
         }
 
-        /* Button Styling */
-        .btn-primary { 
-            background-color: #0056b3; 
-            border-color: #0056b3; 
-        }
-        .btn-primary:hover { 
-            background-color: #003d80; 
+        /* Navbar Styling */
+        .navbar { 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
         }
 
         /* Footer Styling */
@@ -63,6 +63,17 @@
             background-color: #333; 
             color: white; 
             padding: 10px 0; 
+            text-align: center;
+        }
+
+        /* Link Styling */
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -73,71 +84,61 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Harvard Li</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#PS">Personal Statement</a></li>
-                </ul>
-            </div>
         </div>
     </nav>
 
-    <!-- About Me Section -->
-    <section id="about" class="section text-center">
-        <div class="container">
-            <h2>About Me</h2>
-            <!-- Profile Picture Placeholder -->
-            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
-            <p>Hello! I'm <b>[My Name]</b>.</p>
+    <!-- Main Container -->
+    <div class="container mt-4">
+        
+        <!-- About Me -->
+        <div class="row">
+            <div class="col-title">About Me</div>
+            <div class="col-content">
+                <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+                <p>Hello! I'm <b>Harvard Li</b>.</p>
+            </div>
         </div>
-    </section>
 
-    <!-- Projects Section (Formatted as List) -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="text-center">Projects</h2>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <h4>Quadcopter UAV</h4>
-                    <p>An essay on the dynamics and control of quadcopter UAVs, specifically PID and MRAC</p>
-                    <a href="Quadcopter_UAV.pdf" class="btn btn-primary" target="_blank">View Project</a>
-                </li>
-                <li class="list-group-item">
-                    <h4>BPhO Computational Challenge 2024</h4>
-                    <p>This is the submission to the British Physics Olympiad Computational Challenge in 2024 that Alex Pavlov and I created. Our submission achieved top 5 in the country and a Gold award</p>
-                    <a href="https://www.youtube.com/watch?v=TZfNXA3C9mU" class="btn btn-danger" target="_blank">Watch Video</a>
-                </li>
-            </ul>
+        <!-- Projects -->
+        <div class="row">
+            <div class="col-title">Projects</div>
+            <div class="col-content">
+                <ul>
+                    <li>
+                        <b>Quadcopter UAV</b> - An essay on the dynamics and control of quadcopter UAVs, specifically PID and MRAC.
+                        [<a href="Quadcopter_UAV.pdf" target="_blank">View PDF</a>]
+                    </li>
+                </ul>
+            </div>
         </div>
-    </section>
 
-    <!-- Awards Section -->
-    <section id="awards" class="section">
-        <div class="container">
-            <h2 class="text-center">Awards & Achievements</h2>
-            <ul class="list-group">
-                <li class="list-group-item"><b>BPhO Computational Challenge 2024</b> - Top 5 in Country (<a href="https://www.youtube.com/watch?v=TZfNXA3C9mU">video</a>)</li>
-            </ul>
+        <!-- Awards & Achievements -->
+        <div class="row">
+            <div class="col-title">Awards</div>
+            <div class="col-content">
+                <ul>
+                    <li>
+                        <b>BPhO Computational Challenge 2024</b> - Top 5 in the country 
+                        [<a href="https://www.youtube.com/watch?v=TZfNXA3C9mU" target="_blank">Watch Video</a>]
+                    </li>
+                </ul>
+            </div>
         </div>
-    </section>
 
-    <!-- Personal Statement Section (Redirects to PDF Preview) -->
-    <section id="PS" class="section text-center">
-        <div class="container">
-            <h2>Personal Statement</h2>
-            <p>Click below to preview my personal statement:</p>
-            <a href="personal-statement.pdf" class="btn btn-primary mt-3" target="_blank">Preview Personal Statement</a>
+        <!-- Personal Statement -->
+        <div class="row">
+            <div class="col-title">Personal Statement</div>
+            <div class="col-content">
+                <p>Click below to preview my personal statement:</p>
+                <a href="personal-statement.pdf" class="btn btn-primary mt-1" target="_blank">Preview Personal Statement</a>
+            </div>
         </div>
-    </section>
+
+    </div>
 
     <!-- Footer -->
-    <footer class="text-center">
-        © 2025 [My Name] | Hosted on GitHub Pages
+    <footer>
+        © 2025 Harvard Li | Hosted on GitHub Pages
     </footer>
 
     <!-- Bootstrap JavaScript -->
