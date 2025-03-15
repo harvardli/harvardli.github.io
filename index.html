@@ -35,7 +35,15 @@
         }
 
         .navbar-brand, .nav-link {
-            color: #ffffff !important;
+            color: #ffffff !important; /* Make sure text is white */
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.5); /* Ensure toggler is visible */
+        }
+
+        .navbar-toggler-icon {
+            background-color: #ffffff; /* White hamburger menu */
         }
 
         /* Heading Styles */
@@ -97,6 +105,17 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="#">Harvard Li</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#PS">Personal Statement</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
