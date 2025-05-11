@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Harvard Li</title> <!-- Renamed Site Title -->
+    <title>Harvard Li</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     
     <style>
         /* Global Dark Mode Styling */
         body { 
-            font-family: Georgia, serif; /* Formal font */
-            background-color: #121212; /* Dark background */
-            color: #ffffff; /* Light text */
-            scroll-behavior: smooth; /* Enables smooth scrolling */
+            font-family: Georgia, serif;
+            background-color: #121212;
+            color: #ffffff;
+            scroll-behavior: smooth;
         }
 
         /* Section Styling */
         .section { 
-            padding: 100px 0; /* Increased padding for smooth navigation */
+            padding: 100px 0;
         }
 
         /* Alternating background shades for readability */
@@ -33,27 +33,27 @@
         .navbar { 
             background-color: #000000; 
             box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); 
-            position: fixed; /* Keep navbar fixed */
+            position: fixed;
             width: 100%;
             top: 0;
-            z-index: 1000; /* Ensure navbar is always on top */
+            z-index: 1000;
         }
 
         .navbar-brand, .nav-link {
-            color: #ffffff !important; /* Make sure text is white */
+            color: #ffffff !important;
         }
 
         .navbar-toggler {
-            border-color: rgba(255, 255, 255, 0.5); /* Ensure toggler is visible */
+            border-color: rgba(255, 255, 255, 0.5);
         }
 
         .navbar-toggler-icon {
-            background-color: #ffffff; /* White hamburger menu */
+            background-color: #ffffff;
         }
 
         /* Offset for fixed navbar */
         .offset {
-            padding-top: 80px; /* Adjust to match navbar height */
+            padding-top: 80px;
         }
 
         /* Heading Styles */
@@ -106,6 +106,23 @@
             text-decoration: underline;
             color: #66d9ff;
         }
+
+        /* VEX Robotics Image Styling */
+        .vex-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .vex-caption {
+            font-style: italic;
+            color: #cccccc;
+            text-align: center;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 
@@ -122,8 +139,8 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#vex">VEX Robotics</a></li>
                     <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
-<!--                     <li class="nav-item"><a class="nav-link" href="#PS">Personal Statement</a></li> -->
                 </ul>
             </div>
         </div>
@@ -132,8 +149,6 @@
     <!-- Main Container -->
     <div class="container mt-4">
 
-
-        
         <!-- About Me -->
         <div id="about" class="row section offset">
             <div class="col text-center">
@@ -143,8 +158,6 @@
             </div>
         </div>
 
-
-        
         <!-- Projects -->
         <div id="projects" class="row section offset">
             <div class="col">
@@ -153,20 +166,30 @@
                     <li class="list-group-item">
                         <h4>Quadcopter UAV</h4>
                         <p>An essay on the dynamics and control of quadcopter UAVs, specifically PID and MRAC.</p>
-                        <p><b>Disclaimer<b>: This informal draft has not been formally reviewed or checked for plagiarism. Unintentional similarities may exist.</p>
+                        <p><b>Disclaimer</b>: This informal draft has not been formally reviewed or checked for plagiarism. Unintentional similarities may exist.</p>
                         <a href="Quadcopter_UAV.pdf" class="btn btn-primary" target="_blank">View Project</a>
-                    </li>
-                    <li class="list-group-item">
-                        <h4>VEX Robotics</h4>
-                        <p></p>
-                        <a href="vex.txt" class="btn btn-primary" target="_blank">Details</a>
                     </li>
                 </ul>
             </div>
         </div>
 
+        <!-- VEX Robotics -->
+        <div id="vex" class="row section offset">
+            <div class="col">
+                <h2 class="text-center">VEX Robotics</h2>
+                <p>For the past seven years, VEX Robotics has been a massive part of my life, teaching me about teamwork, problem-solving, and persevering through challenges. It all began in 2018 when I joined the Shanghai Ruiguan Robotics Club, unaware it would ignite a passion for building and problem-solving.</p>
+                <p>Initially, I was completely new, fumbling with tools and baffled by how to make a robot function. Our first competition, the 2018-2019 VEX Robotics City Elite in Shanghai, was tough. Our robot barely worked, and my inexperience as a driver didn’t help, so we finished near the bottom. Instead of giving up, I felt motivated. I spent hours after school in the club, tinkering with designs and learning about drivetrains and coding. Those late nights surrounded by tools and code taught me that mistakes are just part of improving.</p>
+                <p>Over time, I took on larger roles. By 2019, I was a programmer, writing driver control code and creating paths for the autonomous period. We faced plenty of challenges, though. In 2020, we realised our autonomous mode was unstable because we relied on time-based control, which was frustrating. I began learning new methods like on/off control and PID controllers, which I later explored in my essay on quadcopters. That experience taught me to think on my feet and find solutions. We also noticed in games with coloured elements, like "Change Up" (2020-2021) and "High Stakes" (2024-2025), that drivers struggled to avoid opposing colours. To address this, we implemented a colour-sorting algorithm using VEX’s optical sensor, making our robot more efficient.</p>
+                <p>In 2024, my team competed in the 2023-2024 VEX Robotics World Championship (Middle School), placing 6th in our division’s qualification matches. We allied with a strong team, fought through the elimination rounds, and won our division championship. Unfortunately, we lost our first match in the Dome—where division champions compete for the world title—by just 2 points. In 2025, we entered the 2024-2025 VEX Robotics World Championship (High School) but placed 33rd in qualifications. Luck was on our side when a solid team chose us as allies, leading to another division championship. Once again, though, we fell short in the Dome, losing our first match by 2 points, marking the end of my seven-year VEX Robotics journey.</p>
+                <p>Robotics also showed me the value of community. Mentoring younger teammates was as rewarding as any victory. Watching a past teammate grow into a confident leader reminded me of my own progress and the mentors who guided me. I also connected with teams from China, the United States, Canada, Senegal, and even the Northern Mariana Islands—one of my favourite places—sharing tips and building friendships despite the competition.</p>
+                <p>Seven years of VEX Robotics gave me more than awards or impressive projects. It taught me to tackle problems, collaborate with others, and view mistakes as opportunities to grow and will definitely be an unforgettable part of my life.</p>
+                <div class="text-center">
+                    <img src="[vex_image_2].png" alt="VEX Robot 2" class="vex-image">
+                    <p class="vex-caption">[Caption for VEX Robot Image 2]</p>
+                </div>
+            </div>
+        </div>
 
-        
         <!-- Awards & Achievements -->
         <div id="awards" class="row section offset">
             <div class="col">
@@ -184,17 +207,7 @@
                     <li class="list-group-item"><b>2025 UK Chemistry Olympiad</b> - Gold</li>
                 </ul>
             </div>
-
-
-        
-        <!-- Personal Statement -->
-<!--         <div id="PS" class="row section offset">
-            <div class="col text-center">
-                <h2>Personal Statement</h2>
-                <p>Click below to preview my personal statement:</p>
-                <a href="personal-statement.pdf" class="btn btn-primary mt-3" target="_blank">Preview Personal Statement</a>
-            </div>
-        </div> -->
+        </div>
 
     </div>
 
